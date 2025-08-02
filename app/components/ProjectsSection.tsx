@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function ProjectsSection() {
 	return (
@@ -16,7 +17,7 @@ export default function ProjectsSection() {
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
-						className="bg-gray-900/50 rounded-xl overflow-hidden border border-gray-800"
+						className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
 					>
 						<div className="p-8">
 							<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -66,6 +67,52 @@ export default function ProjectsSection() {
 										<img src="/iPhone_Login_page.png" title="Login Page (iPhone)" className="h-90 object-contain" />
 										<img src="/Chat_page_with_user.png" title="Chat Page (Android)" className="h-90 object-contain" />
 									</div>
+								</div>
+							</div>
+						</div>
+					</motion.div>
+					{/* Portfolio V1 */}
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+					>
+						<div>
+							<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+								<div className="space-y-6 p-8">
+									<div>
+										<h3 className="text-2xl font-bold mb-4">Portfolio V1</h3>
+										<span className="px-3 py-1.5 m-3 bg-purple-500/10 rounded-full text-teal-400 text-xs md:text-sm">Bootstrap</span>
+										<span className="px-3 py-1.5 m-3 bg-purple-500/10 rounded-full text-teal-400 text-xs md:text-sm">HTML</span>
+										<p className="text-gray-400 mt-2">
+											First Rough draft of my portfolio with basic design and minimal technologies.
+										</p>
+										<a 
+											href="https://github.com/Moab5/Web-Design/blob/main/portfolio-page.html"
+											target="_blank"
+											className="text-grey-300 text-sm  hover:underline inline-flex"
+										>
+											Available here on github
+											<svg className="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+												<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+											</svg>
+										</a>
+									</div>
+
+									<div className="space-y-3">
+										<h4 className="text-sm font-semibold text-blue-400">Features</h4>
+										<ul className="space-y-2 text-sm text-gray-400">
+											<li>• Responsive layout with Bootstrap</li>
+											<li>• Project Section Showcase</li>
+											<li>• Contact Section</li>
+											<li>• Subtle Animation and Transitions</li>
+										</ul>
+									</div>
+								</div>
+								<div className="relative h-full min-h-[300px] lg:min-h-full">
+									<Image src="/portfolioV2.png" alt="" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+									<div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-gray-900 via-transparent to-transparent lg:via-gray-900/20 lg:to-gray-900/40"></div>
 								</div>
 							</div>
 						</div>
